@@ -12,10 +12,14 @@ public class Usuario {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long id;
+	private String nome;
+	private String picole_favorito;
 	private String image_url;
 	//construtores
-	public Usuario(long id, String image_url) {
+	public Usuario(long id, String nome, String picole_favorito, String image_url) {
 		this.id = id;
+		this.nome = nome;
+		this.picole_favorito = picole_favorito;
 		this.image_url = image_url;
 	}
 	public Usuario() {
@@ -33,5 +37,17 @@ public class Usuario {
 	}
 	public void setImage_url(String image_url) {
 		this.image_url = image_url;
+	}
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public String getPicole_favorito() {
+		return picole_favorito;
+	}
+	public void setPicole_favorito(String picole_favorito) {
+		this.picole_favorito = picole_favorito;
 	}
 }
